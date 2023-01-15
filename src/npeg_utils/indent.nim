@@ -57,8 +57,8 @@ grammar "ib":
   Dedent <- >whitespace:
     let delStack = len($0)
     validate delStack < indentStack.top
-    while delStack < indentStack.top:
-      discard indentStack.pop
+    discard indentStack.pop
+
   Static <- >whitespace:
     validate len($0) == indentStack.top
   Line(content) <- ib.Static * content * ib.EOL

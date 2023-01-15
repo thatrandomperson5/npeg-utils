@@ -33,6 +33,8 @@ type
     markers: seq[int]
   User*[T] = proc (node: var T, children: seq[T])
 
+proc `$`*[T](a: AdoptionCenter[T]): string = $(a.s)
+
 proc defaultUser[T](node: var T, children: seq[T]) =
   for child in children:
     node.add child
