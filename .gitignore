@@ -9,5 +9,6 @@ nimcache
 *.pdb
 *.ilk
 
+*.cache
 **/*.replit
 **/replit.nix
