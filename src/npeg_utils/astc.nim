@@ -1,7 +1,10 @@
 import npeg, std/[algorithm]
 ## =================================
-## Adoption style tree construction (grammar `astc`)
+## Adoption style tree construction 
 ## =================================
+## -------------
+## Grammar `astc`
+## -------------
 ## 
 ## `bhook <- 0`
 ## =============

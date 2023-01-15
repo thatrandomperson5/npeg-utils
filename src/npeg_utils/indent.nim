@@ -2,8 +2,12 @@ import npeg
 # Inspired by the example
 
 ## ================
-## Indents in npeg (grammar `ib`)
+## Indents in npeg
 ## ================
+##
+## -------------
+## Grammar `ib`
+## -------------
 ##
 ## `EOL <- "\r\n" | "\n" | "\r" | !1`
 ## ================================
