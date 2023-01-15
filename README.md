@@ -76,11 +76,11 @@ proc add(parent: MyData, child: MyData) = # Add an "add" proc
 ```
 And then change this line:
 ```nim
-let parser = peg("stmt"):
+let parser = peg("main"):
 ```
 to:
 ```nim
-let parser = peg("stmt", ac: AdoptionCenter[MyData]):
+let parser = peg("main", ac: AdoptionCenter[MyData]):
 ```
 We need to collect the data using the `ac` var inside the parser, 
 this part of the tutorial will tell you how!
