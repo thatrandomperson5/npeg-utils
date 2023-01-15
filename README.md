@@ -1,5 +1,10 @@
 # npeg-utils
 A collection of [npeg](https://github.com/zevv/npeg) utils.
+
+Install using this command:
+```
+nimble install https://github.com/thatrandomperson5/npeg-utils
+```
 # Contents
 
 <!-- AutoContentStart -->
