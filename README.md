@@ -80,7 +80,7 @@ Finally we change the KeyBlock.
 ```
 This captures the key for us, but we still need data. Thats what the astc module is for!
 ```nim
-  KeyBlock <- astc.hooked(ib.Line(>Key) * ib.Block(stmt)): 
+  KeyBlock <- astc.hooked(ib.Line(Key) * ib.Block(stmt)): 
     var container = MyData(kind: Container, key: $1) # Create the container and add the key
     adoptCycle(ac, container)
 ```
