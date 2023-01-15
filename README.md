@@ -3,6 +3,12 @@ A collection of [npeg](https://github.com/zevv/npeg) utils.
 # Contents
 
 <!-- AutoContentStart -->
+- [Docs](#docs)
+- [Tutorial](#tutorial)
+    * [Part 1-Indent parser](#part-1-indent-parser)
+    * [Part 2-Gathering data](#part-2-gathering-data)
+    * [Seeing the results](#seeing-the-results)
+
 <!-- AutoContentEnd -->
 
 # Docs
