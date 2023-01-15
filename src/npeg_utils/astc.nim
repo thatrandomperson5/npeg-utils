@@ -1,7 +1,8 @@
 import npeg, std/[algorithm]
-  
+##  
 ## Adoption style tree construction
 ## =================================
+##
 
 grammar "astc": # Requires `ac` naming
   bhook <- 0:
@@ -69,6 +70,7 @@ proc adopt*[T](node: var T, a: var AdoptionCenter[T], u: User[T]=defaultUser) =
  
 template adoptCycle*(center: untyped, n: untyped, cond: untyped): untyped =
   ## Equivalent to: 
+  ##
   ## .. code:: nim
   ##
   ##   n.adopt(center, cond)
