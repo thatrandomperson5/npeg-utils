@@ -5,40 +5,27 @@ import npeg
 ## Indents in npeg
 ## ================
 ##
-## -------------
 ## Grammar `ib`
-## -------------
+## ============
 ##
 ## `EOL <- "\r\n" | "\n" | "\r" | !1`
-## ================================
 ##
 ## `whitespace <- *Blank`
-## ================================
 ##
 ## `Indent <- >whitespace`
-## ================================
-##
-## Ensure that the indent has increased, add to indent stack
+##     Ensure that the indent has increased, add to indent stack
 ##
 ## `Dedent <- >whitespace`
-## ================================
-##
-## Ensure that the indent has decreased, pop from the indent stack
+##     Ensure that the indent has decreased, pop from the indent stack
 ##
 ## `Static <- >whitespace`
-## ================================
-##
-## Ensure that the indent has not changed
+##     Ensure that the indent has not changed
 ##
 ## `Line(content) <- ib.Static * content * ib.EOL`
-## ================================
-##
-## Properly formatted indent-checked line. Content is the line parser
+##     Properly formatted indent-checked line. Content is the line parser
 ##
 ## `Block(content) <- &ib.Indent * content * (&ib.Dedent | !1)`
-## ================================
-##
-## Properly formatted indented block. Content is ensured to be intdented
+##     Properly formatted indented block. Content is ensured to be intdented
 ##
 
 var indentStack* = newSeq[int]()

@@ -1,5 +1,13 @@
-nimcache/
-nimblecache/
-htmldocs/
+# ignore files with no extention:
+*
+!*/
+!*.*
+
+# normal ignores:
+*.exe
+nimcache
+*.pdb
+*.ilk
+
 **/*.replit
 **/replit.nix
