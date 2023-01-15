@@ -1,7 +1,24 @@
 import npeg, std/[algorithm]
-##  
-## Adoption style tree construction
 ## =================================
+## Adoption style tree construction (grammar `astc`)
+## =================================
+## 
+## `bhook <- 0`
+## =============
+## 
+## A before statment hook
+##
+## `ehook <- 0`
+## =============
+##
+## An error hook
+##
+## `hooked(content) <- astc.bhook * (content | astc.ehook)`
+## ===========================================================
+## 
+## Use this to properly adopt groups, just use `astc.hooked()`
+##
+## **Note:** This requires the `AdoptionCenter` to be named `ac`
 ##
 
 grammar "astc": # Requires `ac` naming
