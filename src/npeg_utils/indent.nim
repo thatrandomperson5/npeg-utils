@@ -1,7 +1,9 @@
 import npeg
 # Inspired by the example
 var indentStack* = newSeq[int]()
-    
+
+proc resetIndent*() = 
+    indentStack = newSeq[int]()
 
 template indent*(): int = indentStack.len
 
@@ -18,7 +20,7 @@ grammar "ib":
     EOL <- "\r\n" | "\n" | "\r" | !1
     whitespace <- *Blank
 
-    Indent <- >whitespace:
+    Indent <- >whitespace: 
         validate len($0) > indentStack.top
         indentStack.add len($0)
     Dedent <- >whitespace:
@@ -28,7 +30,6 @@ grammar "ib":
             discard indentStack.pop
     Static <- >whitespace:
         validate len($0) == indentStack.top
-
     Line(content) <- ib.Static * content * ib.EOL
-    Block(content) <- &ib.Indent * content * &ib.Dedent
+    Block(content) <- &ib.Indent * content * (&ib.Dedent | !1)
     
